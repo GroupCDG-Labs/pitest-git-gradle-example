@@ -23,6 +23,6 @@ jobs:
         with:
           java-version: 11
       - name: run pitest
-        run: gradlew pitest-github
+        run: ./gradlew pitest-github
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
