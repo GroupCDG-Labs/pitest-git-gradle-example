@@ -1,0 +1,17 @@
+# Ignore Gradle project-specific cache directory
+.gradle
+
+# Ignore Gradle build output directory
+build
+target
+
+*.swp
+.DS_Store
+
+# intellij seems to require a wrapper task declaration, and then creates these
+# ones in root dir are not ignored
+plugin/gradle
+plugin/gradlew
+plugin/gradlew.bat
+.idea
+*.iml

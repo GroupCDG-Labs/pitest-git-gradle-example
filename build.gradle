@@ -1,0 +1,74 @@
+plugins {
+  id 'info.solidsoft.pitest' apply false
+  id 'com.groupcdg.pitest.github'
+}
+
+pitestGithub {
+  // a token with api access is required to update merge requests
+  // the plugin will take the value placed in the enviroment variable TOKEN
+  // if this is not present then it may be set here using standard gradle mechanisms
+  //token = a token from somewhere
+}
+
+configureJavaProjects(':module_a', ':module_b')
+
+def configureJavaProjects(String... names) {
+  names.each { name ->
+    project(name) {
+      apply plugin: 'java'
+      apply plugin: 'idea'
+      apply plugin: 'info.solidsoft.pitest'
+
+      repositories {
+        jcenter()
+        mavenCentral()
+      }
+
+      dependencies {
+        // ------------------------------------------------------------------------------------------
+        // Tests
+        // ------------------------------------------------------------------------------------------
+        testImplementation('org.junit.jupiter:junit-jupiter-api')
+        testImplementation('org.assertj:assertj-core:3.11.1')
+        testRuntimeOnly('org.junit.jupiter:junit-jupiter-engine')
+
+        testImplementation(platform('org.junit:junit-bom:5.7.0'))
+        testImplementation('org.junit.jupiter:junit-jupiter')
+
+        // add the git plugin to pitest, this enables git integration
+        pitest "com.groupcdg:pitest-git-plugin:0.0.10"
+
+      }
+
+      tasks.withType(Test) {
+        useJUnitPlatform()
+      }
+
+      tasks.withType(JavaCompile) {
+        options.compilerArgs += ['-Xlint', '-Werror']
+        options.encoding = 'UTF-8'
+        options.release = 8
+      }
+
+      pitest {
+        failWhenNoMutations = false
+        pitestVersion = '1.6.7'
+        junit5PluginVersion = '0.14'
+        targetClasses = ['com.example.*']
+        timestampedReports = false
+        excludedMethods = ['toString']
+        // gitci json output is required - these files are read by the github plugin
+        outputFormats = ['gitci']
+
+        // git feature limits analysis to contents of PR only
+        features = ["+GIT(from[HEAD~1])"]
+        
+        verbose = true
+        threads = 4
+      }
+    }
+  }
+
+}
+
+
