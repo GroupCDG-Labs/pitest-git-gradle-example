@@ -1,0 +1,18 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        mavenCentral()
+    }
+    plugins {
+        id 'info.solidsoft.pitest' version '1.5.2'
+        // the gitlab gradle plugin handles updating of merge requests
+        // it is independent of the pitest git plugin
+        id 'com.groupcdg.pitest.github' version '0.0.8' 
+    }
+}
+
+rootProject.name = 'com.example.gradle'
+
+include('module_a')
+include('module_b')
+
