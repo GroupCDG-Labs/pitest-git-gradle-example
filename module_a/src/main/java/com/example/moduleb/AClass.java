@@ -9,6 +9,7 @@ public class AClass {
         return in.stream()
                 .filter(s -> s.startsWith("FISH")).filter(s -> s.startsWith("QA"))
                 .filter(s -> s.startsWith("Bobby")).filter(s -> s.startsWith("M"))
+                .filter(s -> s.startsWith("P"))
                 .map(Widget::new)
                 .findAny();
     }
