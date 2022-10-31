@@ -1,0 +1,7 @@
+#Licence file for pitest extensions
+#Mon Oct 31 11:33:19 GMT 2022
+expires=31/10/2023
+keyVersion=1
+signature=YXZlBp+Qax0ZQ10Zg8frkO5ZDGDVoNWOW/hChuCraZU5WOznGobfLgIC39eR5ncsfi+hqNSkpK35WeU+QtWrQ+rBzEEl2DKlYIOSJuQ6v5itEtvcG291/JhVBOEj5uqOBwNEu6mSXQCBXjbK0GeP2NcDSZP4RM1JApiQeR7SZ/4\=
+packages=com.example.*
+type=COMMERCIAL
