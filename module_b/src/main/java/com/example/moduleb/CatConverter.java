@@ -8,7 +8,7 @@ public class CatConverter {
     public List<Kitty> catToKitty(List<Cat> in) {
         return in.stream()
                 .filter(c -> c.catCuteness() > 41).filter(c -> isVeryDangerous(c))
-                .filter(c -> true)
+                .filter(c -> 1 == 1)
                 .filter(this::hasAKittyName)
                 .map(c -> new Kitty(c.name()))
                 .collect(Collectors.toList());

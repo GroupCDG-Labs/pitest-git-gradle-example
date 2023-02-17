@@ -32,11 +32,11 @@ def configureJavaProjects(String... names) {
         testImplementation('org.assertj:assertj-core:3.11.1')
         testRuntimeOnly('org.junit.jupiter:junit-jupiter-engine')
 
-        testImplementation(platform('org.junit:junit-bom:5.7.0'))
+        testImplementation(platform('org.junit:junit-bom:5.9.0'))
         testImplementation('org.junit.jupiter:junit-jupiter')
 
         // add the git plugin to pitest, this enables git integration
-        pitest "com.groupcdg:pitest-git-plugin:0.0.10"
+        pitest "com.groupcdg:pitest-git-plugin:1.0.5"
 
       }
 
@@ -52,8 +52,8 @@ def configureJavaProjects(String... names) {
 
       pitest {
         failWhenNoMutations = false
-        pitestVersion = '1.6.7'
-        junit5PluginVersion = '0.14'
+        pitestVersion = '1.11.0'
+        junit5PluginVersion = '1.1.2'
         targetClasses = ['com.example.*']
         timestampedReports = false
         excludedMethods = ['toString']
