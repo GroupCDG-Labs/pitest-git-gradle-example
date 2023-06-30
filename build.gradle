@@ -20,7 +20,6 @@ def configureJavaProjects(String... names) {
       apply plugin: 'info.solidsoft.pitest'
 
       repositories {
-        jcenter()
         mavenCentral()
       }
 
