@@ -7,7 +7,7 @@ pluginManagement {
         id 'info.solidsoft.pitest' version '1.9.0'
         // the github gradle plugin handles updating of merge requests
         // it is independent of the pitest git plugin
-        id 'com.groupcdg.pitest.github' version '0.0.8' 
+        id 'com.groupcdg.pitest.github' version '1.0.3' 
     }
 }
 
