@@ -25,4 +25,4 @@ jobs:
       - name: run pitest
         run: ./gradlew pitest-github
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}

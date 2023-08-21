@@ -1,7 +1,7 @@
-#Latest licence for this subscription available at https://subscriptions.arcmutate.com/token/cdg-pitest-licence.txt
-#Wed Jun 28 14:42:39 UTC 2023
-expires=28/07/2023
+#Licence file for pitest extensions
+#Mon Aug 21 14:55:26 BST 2023
+expires=21/08/2024
 keyVersion=1
-signature=irMe4CfZL1nqx7dKFEM49+auo0kQxP8zW7ZTyp06yiZ/oV3jzOnc+Ff6C7y1Fj1RqFbARM+9+F4+AVPkv63XbdpHsNK4Vz5mLn/6UZw1Xsa+P2FPV3+Q/nOs0AAzRCCHlIphia6ifMy5kCxZISor1mYmGv0XzF9RkDuYhDmH+p4\=
+signature=T/3gj9gmHfChh/QLWlwzPInQRZAiVnh8wrOi1vORC+syP2JmEL3yw9eapwhum6tI/GREoxLCjB9H/+GTPVW7HBqgxtUKVn4TZ2csV9XEU6z0PpHWSFBIzqVA19fAv12oPAlLFm1sJbgiVG5hZao5NuEs6QayvUue2hXxneeD4gY\=
 packages=com.example.*
 type=EVALUATION
