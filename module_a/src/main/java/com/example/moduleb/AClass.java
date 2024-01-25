@@ -10,6 +10,7 @@ public class AClass {
                 .filter(s -> s.startsWith("FISH"))
                 .filter(s -> s.startsWith("bug"))
                 .filter(s -> s.startsWith("Bobby")).filter(s -> s.startsWith("M"))
+                .filter(s -> s.startsWith("P"))
                 .map(Widget::new)
                 .findAny();
     }
